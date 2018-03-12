@@ -1,4 +1,10 @@
-[ubuntu]
+[ubuntu-1]
 172.16.114.1
+[ubuntu-2]
 172.16.114.2
+[ubuntu-3]
 172.16.114.3
+[ubuntu:children]
+ubuntu-1
+ubuntu-2
+ubuntu-3
