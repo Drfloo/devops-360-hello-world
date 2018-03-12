@@ -3,12 +3,13 @@
 - name: stop apache2
   service:
     state: stopped
-    named: apache2
+    name: apache2
 
 - name: Install nginx
   apt:
     state: present
     name: nginx
+    cache_valid_time: 3600
     update_cache: yes
 - name: Copy Hello-world vhost conf
   copy:
@@ -36,5 +37,5 @@
 - name: restart nginx
   service:
     state: restarted
-    named: nginx
+    name: nginx
 
