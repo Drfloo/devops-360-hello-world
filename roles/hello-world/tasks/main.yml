@@ -1,5 +1,10 @@
 ---
 # tasks file for hello-world
+- name: stop apache2
+  service:
+    state: stopped
+    named: apache2
+
 - name: Install nginx
   apt:
     state: present
@@ -28,3 +33,8 @@
     dest: /opt/hello-world/index.html
     owner: www-data
     group: www-data
+- name: restart nginx
+  service:
+    state: restarted
+    named: nginx
+
